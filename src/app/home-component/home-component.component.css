@@ -1,0 +1,93 @@
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: wrap;
+  list-style-type: none;
+  padding: 0;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 200px 250px; /* Creates a 3-column grid */
+  grid-gap: 10px; /* Sets the gap between grid items */
+  grid-auto-rows: minmax(150px, auto);
+  grid-gap: 20px;
+}
+
+li a {
+  width: 20rem;
+  height: 40rem;
+  border: 1px solid white;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  color: #e72929;
+}
+li a:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+ngb-rating {
+  color: #ffc107;
+  font-size: 10px;
+}
+
+.content {
+  padding: 0.5rem 2rem;
+}
+
+.favorite {
+  color: red;
+  position: relative;
+  font-size: 1.2rem;
+}
+.favorite.not {
+  color: gray;
+}
+.product-item-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.origins {
+  flex: 9;
+}
+
+.origins span {
+  border-radius: 2rem;
+  background-color: whitesmoke;
+  display: inline-block;
+  font-size: 0.7rem;
+  color: grey;
+  margin-right: 0.3rem;
+}
+
+.cook-time {
+  font-size: 0.8rem;
+  flex: 3;
+  text-align: right;
+}
+
+.price {
+  color: #414141;
+  margin-top: 0.7rem;
+}
+.grid {
+  display: -moz-grid-group;
+  column-span: all;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 20px;
+}
+
+.grid-item {
+  border: 1px solid #ccc;
+  padding: 20px;
+  text-align: center;
+}
+.name {
+  justify-content: spac;
+}

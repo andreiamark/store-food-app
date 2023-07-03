@@ -1,0 +1,38 @@
+<app-search></app-search>
+<app-tags></app-tags>
+<div class="grid-container">
+  <ul>
+    <li *ngFor="let food of foods$ | async">
+      <a>
+        <img
+          [src]="food.imageUrl"
+          alt=""
+          [routerLink]="'/details/' + food.id"
+        />
+        <div class="content">
+          <div class="name">
+            {{ food.name }}
+            <span class="favorite" [class.not]="!food.favorite">❤</span>
+          </div>
+          <ngb-rating [max]="5" [readonly]="false"></ngb-rating>
+          <div class="product-item-footer">
+            <div class="origins">
+              <span *ngFor="let origin of food.origins">
+                {{ origin }}
+              </span>
+            </div>
+            <div class="cook-time">
+              <span>🕒</span>
+              {{ food.cookTime }}
+            </div>
+          </div>
+          <div class="price">
+            <span>
+              {{ food.price | currency }}
+            </span>
+          </div>
+        </div>
+      </a>
+    </li>
+  </ul>
+</div>
